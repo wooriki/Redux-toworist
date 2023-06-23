@@ -83,7 +83,7 @@ function FormInput() {
             content,
             isDone: false,
         };
-        //dipatch로 불러오고 추가시 작동할 case 인 addTodo() 안에 넣어준다
+        //dipatch로 보내주는데 보내줄 시 작동할 case 인 addTodo() 안에 넣어준다
         dispatch(addTodo(newTo));
         setTitle("");
         setContent("");
@@ -92,9 +92,11 @@ function FormInput() {
     // 페이지 랜더링 시 titleInput에 autoFocus되게
     // useRef , useEffect 사용
     const cursorRef = useRef();
+
     useEffect(() => {
         cursorRef.current.focus();
     }, []);
+
     return (
         <Content>
             <Formtag>
