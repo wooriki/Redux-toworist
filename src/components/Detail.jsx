@@ -19,8 +19,7 @@ const Div = styled.section`
     border: 5px double #3582c4;
     border-radius: 20px;
     background-color: #f0f0f1;
-
-    box-shadow: 30px 30px 100px 2px gray;
+    box-shadow: 30px 30px 100px 2px #888888ad;
 `;
 
 const Inner = styled.div`

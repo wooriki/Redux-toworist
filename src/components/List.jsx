@@ -14,7 +14,7 @@ const Body = styled.div`
     border: 4px solid #c3c4c7;
     border-radius: 16px;
     margin-bottom: 30px;
-    box-shadow: 20px 20px 80px 1px gray;
+    box-shadow: 20px 20px 80px 1px #888888ad;
 `;
 const Title = styled.h2`
     width: 210px;
