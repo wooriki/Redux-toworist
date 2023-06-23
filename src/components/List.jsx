@@ -5,6 +5,7 @@ import { toggles, delets } from "../redux/modules/todos";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// style component 전체 및 각 태그들을 스타일링
 const Body = styled.div`
     width: 250px;
     height: 170px;
@@ -70,7 +71,7 @@ const P = styled.p`
 function List({ item }) {
     // useDispatch로 action 객체 리두서로 보내기
     const dispatch = useDispatch();
-
+    //id를 받아서 활용하려고함
     const deletOn = (id) => dispatch(delets(id));
     const toggleOn = (id) => dispatch(toggles(id));
 
@@ -84,6 +85,7 @@ function List({ item }) {
                     {!item.isDone ? "Complete" : "Cancel"}
                 </ToggleBtn>
             </Btns>
+            {/* js문법이라서 ``사용 */}
             <Link to={`${item.id}`}>
                 <P>Details</P>
             </Link>

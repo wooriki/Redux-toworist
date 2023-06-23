@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+// style component 전체 및 각 태그들을 스타일링
 const Content = styled.div`
     font-weight: 900;
     display: flex;
@@ -19,6 +20,8 @@ const Sub = styled.div`
     text-align: right;
     margin-right: 20px;
 `;
+
+//최상단의 여백 및 보조 문구 삽입
 function Nav() {
     return (
         <Content>

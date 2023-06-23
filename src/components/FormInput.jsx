@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/modules/todos";
-import uuid from "react-uuid";
 import styled from "styled-components";
+import uuid from "react-uuid";
 
+// style component 전체 및 각 태그들을 스타일링
 const Content = styled.div`
     height: 90px;
     align-items: center;
@@ -54,6 +55,7 @@ const Btn = styled.button`
     cursor: pointer;
 `;
 
+// 상단에 form [input, btn을 포함할] tag를 만들어준다.
 function FormInput() {
     // useDispatch로 액션 객체 리듀서로 보내기
     const dispatch = useDispatch();
@@ -62,27 +64,37 @@ function FormInput() {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
+    // 각 input태그에 들어갈 값들의 value를 변수로 선언
     const titleInput = (e) => setTitle(e.target.value);
     const contentInput = (e) => setContent(e.target.value);
 
+    // 등록버튼 클릭시 기존 state 배열에 새로운 배열을 추가
+    // if문법으로 validation check
     const registerBtn = (e) => {
         e.preventDefault();
         if (title === "" || content === "") {
             alert("공란을 채워주세요.");
             return;
         }
+        //uuid로 각 id마다 고유id부여 (ex nanoid : 용량 자체가 훨씬 가볍고, 21자리로 더 짧다)
         const newTo = {
             id: uuid(),
             title,
             content,
             isDone: false,
         };
-
+        //dipatch로 불러오고 추가시 작동할 case 인 addTodo() 안에 넣어준다
         dispatch(addTodo(newTo));
         setTitle("");
         setContent("");
     };
 
+    // 페이지 랜더링 시 titleInput에 autoFocus되게
+    // useRef , useEffect 사용
+    const cursorRef = useRef();
+    useEffect(() => {
+        cursorRef.current.focus();
+    }, []);
     return (
         <Content>
             <Formtag>
@@ -93,6 +105,7 @@ function FormInput() {
                         placeholder="제목을 입력해주세요"
                         value={title}
                         onChange={titleInput}
+                        ref={cursorRef}
                     />
                 </Div>
                 <Div>

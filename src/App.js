@@ -1,14 +1,8 @@
 import "./App.css";
 import Router from "./Shared/Router";
 
+// 기본적으로 Router를 활용해서 전체적으로 제어해준다.
 function App() {
-    // const bringTodosSet = useSelector((state) => {
-    //     return state.todosSet;
-    // });
-
-    // dispatch를 가져와봐
-    // const dispatch = useDispatch();
-    // console.log(bringTodosSet);
     return (
         <>
             <Router />

@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Style from "./Style";
 import styled from "styled-components";
 
+// style component 전체 및 각 태그들을 스타일링
 const Body = styled.div`
     min-height: 100vh;
     display: flex;
@@ -52,20 +53,24 @@ const Btn = styled.button`
 `;
 
 function Detail() {
+    // useSelector로 store에서 전역 state 가져오기
+    // state. xxx 이거 잘 불러와야함 *오류발생
     const todos = useSelector((state) => state.todos);
+
     const params = useParams();
+    // URL를 활용할 수 있도록 useParams 변수로 불러옴
 
     const navigate = useNavigate();
 
     const foundData = todos.find((item) => item.id === params.id);
-    //id 찾아
+    //해당 item의 id와 url의 id 찾아서 렌더링해줄거야
     return (
         <>
             <Style />
             <Body>
                 <Div>
                     <Inner>
-                        <span>ID : {foundData.id}</span>
+                        <span>toDo ID : {foundData.id}</span>
                     </Inner>
                     <div>
                         <Title>{foundData.title}</Title>
