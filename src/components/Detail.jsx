@@ -29,6 +29,9 @@ const Title = styled.h1`
     margin: 0 0 0 0;
 `;
 
+const Content = styled.p`
+    margin-left: 10px;
+`;
 const Btn = styled.button`
     float: right;
     margin-top: -20px;
@@ -39,6 +42,7 @@ const Btn = styled.button`
     padding: 6px 24px 6px 24px;
     border: 3px solid #2271b1;
     border-radius: 10px;
+    cursor: pointer;
 `;
 
 function Detail() {
@@ -59,7 +63,7 @@ function Detail() {
                     </Inner>
                     <div>
                         <Title>{foundData.title}</Title>
-                        <p>{foundData.content}</p>
+                        <Content>{foundData.content}</Content>
                     </div>
                     <Btn onClick={() => navigate("/")}>Home</Btn>
                 </Div>

@@ -51,6 +51,7 @@ const Btn = styled.button`
     font-size: 18px;
     background-color: #135e96;
     color: white;
+    cursor: pointer;
 `;
 
 function FormInput() {

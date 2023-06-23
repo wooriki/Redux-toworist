@@ -9,6 +9,7 @@ const Style = createGlobalStyle`
     margin: 0 auto;
   }
 
+
 `;
 
 export default Style;

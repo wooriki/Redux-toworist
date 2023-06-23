@@ -8,13 +8,16 @@ const Body = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 `;
+const Title = styled.h2`
+    margin: 20px 0 0 16px;
+`;
 
 function AllDone() {
     const todos = useSelector((state) => state.todos);
 
     return (
         <div>
-            <h2>Finally Done !! 🎉🎉</h2>
+            <Title>Finally Done !! 🎉🎉</Title>
             <Body>
                 {todos
                     .filter((todos) => todos.isDone)
