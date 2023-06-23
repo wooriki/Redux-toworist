@@ -48,9 +48,14 @@ const Btn = styled.button`
     font-weight: 600;
     background-color: #2271b1;
     padding: 6px 24px 6px 24px;
-    border: 3px solid #2271b1;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
+    &:hover {
+        background-color: #9ec2e6;
+        color: black;
+        font-weight: 900;
+    }
 `;
 
 function Detail() {
