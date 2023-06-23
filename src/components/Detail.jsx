@@ -21,9 +21,12 @@ const Div = styled.section`
 `;
 
 const Inner = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-weight: 600;
+    color: #2271b1;
+`;
+const Title = styled.h1`
+    font-size: 38px;
+    margin: 0 0 0 0;
 `;
 
 const Btn = styled.button`
@@ -55,7 +58,7 @@ function Detail() {
                         <span>ID : {foundData.id}</span>
                     </Inner>
                     <div>
-                        <h1>{foundData.title}</h1>
+                        <Title>{foundData.title}</Title>
                         <p>{foundData.content}</p>
                     </div>
                     <Btn onClick={() => navigate("/")}>Home</Btn>
