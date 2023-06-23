@@ -15,10 +15,16 @@ const Body = styled.div`
     margin-bottom: 30px;
 `;
 const Title = styled.h2`
+    width: 210px;
+    height: 38px;
+    overflow: hidden;
     margin: 0 0 12px 0;
     font-size: 26px;
 `;
 const Ele = styled.p`
+    width: 200px;
+    height: 24px;
+    overflow: hidden;
     font-size: 16px;
     margin-top: -10px;
     font-weight: 600;

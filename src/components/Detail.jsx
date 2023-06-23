@@ -25,12 +25,18 @@ const Inner = styled.div`
     color: #2271b1;
 `;
 const Title = styled.h1`
+    width: 760px;
+    height: 48px;
+    overflow: hidden;
     font-size: 38px;
-    margin: 0 0 0 0;
+    margin: 10px 0 0 0;
 `;
 
 const Content = styled.p`
-    margin-left: 10px;
+    margin: 20px 0 0 10px;
+    width: 550px;
+    height: 24px;
+    overflow: hidden;
 `;
 const Btn = styled.button`
     float: right;
