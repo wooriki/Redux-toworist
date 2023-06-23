@@ -57,11 +57,11 @@ const ToggleBtn = styled.div`
     margin: 0 0 0 10px;
     border: none;
     border-radius: 5px;
-    background-color: #00a32a;
+    background-color: #31ccab;
     color: white;
     cursor: pointer;
     &:hover {
-        background-color: #007017;
+        background-color: #00a380;
     }
 `;
 const P = styled.p`

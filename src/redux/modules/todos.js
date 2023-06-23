@@ -1,58 +1,58 @@
 import uuid from "react-uuid";
 
 // 실패한 부분 //
-// // // action value
-// // const TOGGLE = "todosSet/TOGGLE";
-// // const ADDON = "todosSet/ADDON";
-// // const DELETEON = "todosSet/DELETEON";
+// // action value
+// const TOGGLE = "todosSet/TOGGLE";
+// const ADDON = "todosSet/ADDON";
+// const DELETEON = "todosSet/DELETEON";
 
-// // // action creator : action value를 return 하는 함수
-// // export const toggleTodo = (payload) => {
-// //     return {
-// //         type: TOGGLE,
-// //         payload,
-// //     };
-// // };
-// // export const addTodo = (payload) => {
-// //     return {
-// //         type: ADDON,
-// //         payload,
-// //     };
-// // };
-// // export const deleteTodo = (payload) => {
-// //     return {
-// //         type: DELETEON,
-// //         payload,
-// //     };
-// // };
+// // action creator : action value를 return 하는 함수
+// export const toggleTodo = (payload) => {
+//     return {
+//         type: TOGGLE,
+//         payload,
+//     };
+// };
+// export const addTodo = (payload) => {
+//     return {
+//         type: ADDON,
+//         payload,
+//     };
+// };
+// export const deleteTodo = (payload) => {
+//     return {
+//         type: DELETEON,
+//         payload,
+//     };
+// };
 
-// // //리듀서 : 함수(state에 변화를 일으키는 함수)
-// // // - stae를 action의 type에 따라 변경하는 함수
+// //리듀서 : 함수(state에 변화를 일으키는 함수)
+// // - stae를 action의 type에 따라 변경하는 함수
 
-// // // input : state, action을 받는다
-// // // action 객체라는 것은 action type을 payload만큼 처리하는 것이다
-// // // ex : payload가 3이다 . 3만큼 plus
-// // const todosSet = (state = initialState, action) => {
-// //     switch (action.type) {
-// //         case ADDON:
-// //             return [...state, action.payload];
-// //         case TOGGLE:
-// //             return state.map((todo) => {
-// //                 if (todo.id === action.payload) {
-// //                     return { ...todo, isDone: !todo.isDone };
-// //                 }
-// //                 return todo;
-// //             });
-// //         case DELETEON:
-// //             return state.filter((todo) => {
-// //                 return todo.id !== action.payload;
-// //             });
-// //         default:
-// //             return state;
-// //     }
-// // };
+// // input : state, action을 받는다
+// // action 객체라는 것은 action type을 payload만큼 처리하는 것이다
+// // ex : payload가 3이다 . 3만큼 plus
+// const todosSet = (state = initialState, action) => {
+//     switch (action.type) {
+//         case ADDON:
+//             return [...state, action.payload];
+//         case TOGGLE:
+//             return state.map((todo) => {
+//                 if (todo.id === action.payload) {
+//                     return { ...todo, isDone: !todo.isDone };
+//                 }
+//                 return todo;
+//             });
+//         case DELETEON:
+//             return state.filter((todo) => {
+//                 return todo.id !== action.payload;
+//             });
+//         default:
+//             return state;
+//     }
+// };
 
-// // export default todosSet;
+// export default todosSet;
 const initialState = [
     {
         id: uuid(),
