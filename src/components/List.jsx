@@ -46,6 +46,9 @@ const DelteBtn = styled.div`
     background-color: #ff8085;
     color: white;
     cursor: pointer;
+    &:hover {
+        background-color: #d63638;
+    }
 `;
 const ToggleBtn = styled.div`
     font-weight: 600;
@@ -56,6 +59,9 @@ const ToggleBtn = styled.div`
     background-color: #00a32a;
     color: white;
     cursor: pointer;
+    &:hover {
+        background-color: #007017;
+    }
 `;
 const P = styled.p`
     margin: 6px 6px 0 0;

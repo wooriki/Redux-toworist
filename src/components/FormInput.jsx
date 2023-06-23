@@ -53,6 +53,11 @@ const Btn = styled.button`
     background-color: #135e96;
     color: white;
     cursor: pointer;
+    &:hover {
+        background-color: #9ec2e6;
+        color: black;
+        font-weight: 900;
+    }
 `;
 
 // 상단에 form [input, btn을 포함할] tag를 만들어준다.
