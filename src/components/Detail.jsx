@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 // style component 전체 및 각 태그들을 스타일링
 const Body = styled.div`
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
